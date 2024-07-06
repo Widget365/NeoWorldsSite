@@ -1,0 +1,524 @@
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html, body {
+  color: #222;
+  background-color: #03338f;
+  font-size: 1em;
+  line-height: 1.4;
+  width: 100%;
+  height: 100%;
+  -webkit-font-smoothing : none;
+  margin: 0;
+  cursor: url(../img/mouse.png) 5 3, auto;
+}
+
+/* ==========================================================================
+   Custom Scrollbar: Only works with Chromium and Safari
+   ========================================================================== */
+
+/* width */
+::-webkit-scrollbar {
+  min-width: 17px;
+  min-height: 17px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border: inset #979797 2px;
+  background: #c3c3c3;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  box-sizing: border-box;
+  border: double transparent 7px;
+  border-image: url("../img/scroll-old-9cut.png") fill 7 7 7 7 repeat;
+  background: transparent;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  border-color: #00000016;
+}
+
+textarea:focus, input:focus{
+  outline: none;
+}
+
+@font-face {
+  font-family: 'arielpixel';
+  src: url('../fnt/arielpixel.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'arielpixel-2x';
+  src: url('../fnt/arielpixel-2x.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'threeish';
+  src: url('../fnt/threeish-re.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'jitlogin';
+  src: url('../fnt/jit-login.ttf') format('truetype');
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+a, button {
+  text-decoration: none;
+  cursor: url(../img/mousepoint.png) 5 0, auto;
+}
+
+img, div {
+  image-rendering: pixelated;
+  /* background-size: 100% 100%; */
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/*
+ * Text
+ */
+
+.menu-text {
+  font-family: arielpixel;
+  color: white;
+  font-size: 10px;
+  text-shadow: 1px 1px #4d3d12;
+  margin-top: 0;
+  letter-spacing: 0;
+  word-spacing: -.06px;
+}
+
+.title-text {
+  font-family: arielpixel-2x;
+  color: white;
+  font-size: 13px;
+  text-shadow: 1px 1px #1e6842;
+  margin-top: 0;
+  margin-bottom: -1px;
+  letter-spacing: 0;
+  word-spacing: -.5px;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+.main-text {
+  font-family: arielpixel;
+  color: white;
+  font-size: 10px;
+  text-shadow: 1px 1px #1e6842;
+  margin-top: 0;
+  margin-bottom: -1px;
+  letter-spacing: 0;
+  word-spacing: -.06px;
+}
+
+.threeish-text {
+  font-family: threeish;
+  color: white;
+  font-size: 7px;
+  margin-top: 0;
+  margin-bottom: -1px;
+  word-spacing: .5px;
+}
+
+@-moz-document  url-prefix() {
+  .menu-text {
+    word-spacing: -.012px;
+  }
+
+  .main-text {
+    word-spacing: -.012px;
+  }
+}
+
+.login-text {
+  font-family: jitlogin;
+  color: white;
+  font-size: 9px;
+  margin-top: 0;
+  letter-spacing: 0px;
+}
+
+/*
+ * Divs and such
+ */
+
+.main-box {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen
+and (max-width: 773px) {
+  .main-box {
+    justify-content: left;
+  }
+}
+
+.teal-box {
+  box-sizing: border-box;
+  border: double transparent 6px;
+  border-image: url(../img/body-9cut.png) fill 6 repeat;
+}
+
+.overflow-box {
+  box-sizing: border-box;
+  border: double transparent 6px;
+  border-image: url(../img/overwindow-9cut.png) fill 6 repeat;
+  overflow-y: auto;
+}
+
+.display-box {
+  box-sizing: border-box;
+  border: double transparent 6px;
+  border-image: url(../img/overwindow-9cut.png) fill 6 repeat;
+}
+
+.old-input {
+  box-sizing: border-box;
+  border: double transparent 2px;
+  border-image: url(../img/input-9cut.png) fill 2 repeat;
+  width: 81px;
+  height: 11px;
+  padding: 0;
+  margin: 0;
+  font-family: threeish;
+  font-size: 9px;
+  margin-top: 0;
+  letter-spacing: 0px;
+}
+
+.sidebar {
+  margin-bottom: 6px;
+  background-image: url(../img/button.png);
+  background-repeat: no-repeat;
+  width: 97px;
+  height: 28px;
+  position: relative;
+}
+
+.sidebar:hover {
+  background-image: url(../img/button-hover.png);
+}
+
+.sidebar-selected {
+  margin-bottom: 6px;
+  background-image: url(../img/button-selected.png);
+  background-repeat: no-repeat;
+  width: 97px;
+  height: 28px;
+  position: relative
+}
+
+.tab {
+  margin-right: 6px;
+  background-image: url(../img/tab.png);
+  background-repeat: no-repeat;
+  height: 21px;
+  width: 69px;
+}
+
+.tab:hover {
+  background-image: url(../img/tab-hover.png);
+}
+
+.tab-selected {
+  margin-right: 6px;
+  background-image: url(../img/tab-selected.png);
+  background-repeat: no-repeat;
+  height: 21px;
+  width: 69px;
+}
+
+.tab-disabled {
+  margin-right: 6px;
+  background-image: url(../img/tab.png);
+  background-repeat: no-repeat;
+  height: 21px;
+  width: 69px;
+}
+
+.play-1 {
+  width: 104px;
+  height: 104px;
+  position: absolute;
+  background-image: url(../img/play-typea.png);
+  z-index: 1;
+  left: 404px;
+  top: -48px;
+}
+
+.play-1:hover {
+  background-image: url(../img/play-typea-hover.png);
+}
+
+.play-2 {
+  width: 44px;
+  height: 22px;
+  position: absolute;
+  background-image: url(../img/play-typeb.png);
+  z-index: 1;
+  left: 27px;
+  top: 79px;
+}
+
+.play-2:hover {
+  background-image: url(../img/play-typeb-hover.png);
+}
+
+.play-3 {
+  width: 127px;
+  height: 59px;
+  position: absolute;
+  background-image: url(../img/play-typec.png);
+  z-index: 1;
+  left: 184px;
+  top: 302px;
+}
+
+.play-3:hover {
+  background-image: url(../img/play-typec-hover.png);
+}
+
+.group {
+  width: 228px;
+  height: 96px;
+  background-image: url(../img/group-button.png);
+  z-index: 1;
+}
+
+.group:hover {
+  background-image: url(../img/group-button-hover.png);
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .visually-hidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * The use of `table` rather than `block` is only necessary if using
+ * `::before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
