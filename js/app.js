@@ -5,7 +5,7 @@ function loadBlogData() {
         <div style="margin-top: 12px">
           <p class="main-text" style="margin-left: 1px;">Loading...</p>
           <div style="display: flex; justify-content: center; justify-items: center; width: 100%">
-            <img src="img/loading.gif" style="margin-top: 4px;">
+            <img src="img/loading.gif" style="margin-top: 4px; pointer-events: none">
           </div>
         </div>
       </div>
@@ -27,7 +27,7 @@ function loadBlogData() {
                 </div>
                 <div style="width: 36%; height: 136px;">
                   <div style="width: 139px; height: 114px; margin: auto; margin-top: 6px; overflow: hidden;">
-                    <img style="margin-top: ${-114 * (3 - Math.floor(i / 4))}px; margin-left: ${-139 * (2 - (i % 3))}px" src="https://raw.githubusercontent.com/Widget365/VRCProjectSupplementals/main/blogimages.png">
+                    <img style="margin-top: ${-114 * (3 - Math.floor(i / 4))}px; margin-left: ${-139 * (2 - (i % 3))}px; pointer-events: none" src="https://raw.githubusercontent.com/Widget365/VRCProjectSupplementals/main/blogimages.png">
                   </div>
                 </div>
               </div>
