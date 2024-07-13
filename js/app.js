@@ -27,7 +27,7 @@ function loadBlogData() {
                 </div>
                 <div style="width: 36%; height: 136px;">
                   <div style="width: 139px; height: 114px; margin: auto; margin-top: 6px; overflow: hidden;">
-                    <img style="margin-top: ${-114 * (3 - Math.floor(i / 4))}px; margin-left: ${-139 * ((13 - i) % 3)}px; pointer-events: none" src="https://raw.githubusercontent.com/Widget365/VRCProjectSupplementals/main/blogimages.png">
+                    <img style="margin-top: ${-114 * (3 - Math.floor(i / 3))}px; margin-left: ${-278 + (139 * ((11 - i) % 3))}px; pointer-events: none" src="https://raw.githubusercontent.com/Widget365/VRCProjectSupplementals/main/blogimages.png">
                   </div>
                 </div>
               </div>
