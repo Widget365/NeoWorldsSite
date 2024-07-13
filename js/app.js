@@ -10,7 +10,7 @@ function loadBlogData() {
         </div>
       </div>
     `;
-  fetch("https://gist.githubusercontent.com/Widget365/bdbdead005517994e09aac5edfd02d1f/raw/809f2df31cbfa0a3969b66a416c35ad5590e9666/blog.json")
+  fetch("https://gist.githubusercontent.com/Widget365/bdbdead005517994e09aac5edfd02d1f/raw")
     .then(async response => {
       var resText = await response.text();
       var res = JSON.parse(resText);
@@ -27,7 +27,7 @@ function loadBlogData() {
                 </div>
                 <div style="width: 36%; height: 136px;">
                   <div style="width: 139px; height: 114px; margin: auto; margin-top: 6px; overflow: hidden;">
-                    <img style="margin-top: ${-114 * (3 - Math.floor(i / 4))}px; margin-left: ${-139 * (2 - (i % 3))}px; pointer-events: none" src="https://raw.githubusercontent.com/Widget365/VRCProjectSupplementals/main/blogimages.png">
+                    <img style="margin-top: ${-114 * (3 - Math.floor(i / 4))}px; margin-left: ${-139 * ((13 - i) % 3)}px; pointer-events: none" src="https://raw.githubusercontent.com/Widget365/VRCProjectSupplementals/main/blogimages.png">
                   </div>
                 </div>
               </div>
